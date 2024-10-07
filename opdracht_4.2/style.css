@@ -1,0 +1,46 @@
+header 
+{
+    width: 90vw;
+    height: 30vh;
+    font-size: 24px;
+    color: #8A2BE2;
+    font-style: italic;
+    font-weight: bold;
+
+h1 {
+    font-size: 24px;
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 20px;
+    color: #0000ff;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 16px;
+    color: teal;
+    font-weight: bold;
+}
+
+p {
+    color: #4D4D4D;
+    background-color: yellowgreen;
+    border: 4px solid black;
+    border-radius: 25px
+    border-left-width: 8px;
+    padding: 10px;
+    width: 700px;
+}
+
+#paragraph1 {
+    font-weight: bold;
+    color: red;
+}
+
+a {
+    color: #8A2BE2
+}
