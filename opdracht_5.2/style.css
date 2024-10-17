@@ -1,0 +1,129 @@
+*{
+  box-sizing: border-box;
+}
+ 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: black;
+  font-family: "Goldman", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  background-image: url(img/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+  height: 700px;
+  color: white;
+}
+.section-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+ 
+.section-content img{
+  width: 10%;
+  max-width: 50px;}
+
+  .navbar {
+    background-color: #00a8c7;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+}
+
+.navbar li:hover {
+    color: blue; /* Kleur bij hover */
+}
+
+.navbar li.dropdown:hover .dropdown-content {
+    display: block; /* Toon dropdown bij hover */
+}
+
+.dropdown-content {
+    display: none; /* Standaard verborgen */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #E9E9E9; /* Achtergrondkleur bij hover */
+}
+
+.navbar li.dropdown:after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 5px;
+}
+
+
+ 
+nav {
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  min-height: 10vh;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  background: #00a8c7;
+  justify-content: space-between;
+ 
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav li {
+  font-size: 2.5rem;
+  padding: 0 4rem 0 4rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav img {
+  width: 5vw;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00a8c7;
+  text-align: center;
+  font-size: 15px;
+}
