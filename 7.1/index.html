@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header/Navbar styles */
+        .navbar {
+            background-color: #ef4444;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .mobile-menu-icon {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            display: none; /* Verborgen op desktop */
+        }
+
+        /* Content sections */
+        .section {
+            padding: 40px;
+            min-height: 250px;
+        }
+
+        .section-1 {
+            background-color: #fcd34d;
+        }
+
+        .section-2 {
+            background-color: #fb923c;
+        }
+
+        .section-3 {
+            background-color: #4ade80;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Tablet styles */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                background-color: #6366f1;
+            }
+
+            .section {
+                text-align: center;
+                padding: 60px 20px;
+            }
+
+            .section-1 {
+                background-color: #67e8f9;
+            }
+
+            .section-2 {
+                background-color: #e879f9;
+            }
+
+            .section-3 {
+                background-color: #312e81;
+                color: white;
+            }
+        }
+
+        /* Mobile styles */
+        @media screen and (max-width: 480px) {
+            .navbar {
+                background-color: #f87171;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+            }
+
+            .mobile-menu-icon {
+                display: block; /* Toon op mobiel */
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            .section-1 {
+                background-color: #f87171;
+            }
+
+            .section-2, .section-3 {
+                background-color: #6366f1;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Logo</div>
+        <div class="mobile-menu-icon"></div>
+    </nav>
+
+    <main>
+        <section class="section section-1">
+            <h2>Titel</h2>
+            <p>Test</p>
+        </section>
+
+        <section class="section section-2">
+            <h2>Titel</h2>
+            <p>Test</p>
+        </section>
+
+        <section class="section section-3">
+            <h2>Titel</h2>
+            <p>test </p>
+        </section>
+    </main>
+</body>
+</html>
