@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.logo, .login {
+    flex-basis: 25%; /* Kwart van de ruimte */
+    text-align: center;
+}
+
+.navigation {
+    flex-basis: 50%; /* Helft van de ruimte */
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
