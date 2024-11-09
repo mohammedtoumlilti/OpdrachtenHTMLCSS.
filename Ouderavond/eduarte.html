@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduArte - ROC Ouderavond</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #00796b;
+            color: white;
+            padding: 1rem;
+        }
+
+        nav {
+            background: #00897b;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #00897b;
+            width: 200px;
+            z-index: 100;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+        }
+
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        .schedule-table th {
+            background: #00796b;
+            color: white;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .app-features {
+            background: #e0f2f1;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .feedback-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #00796b;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #00897b;
+        }
+
+        .video-demo {
+            margin: 2rem 0;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-demo video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #00796b;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EduArte - Studentinformatiesysteem</h1>
+    </header>
+
+    <nav>
+        <ul>
+
+            <li>
+                <a href="#">Studie Info ▼</a>
+                <ul>
+                    <li><a href="canvas.html">Canvas</a></li>
+                    <li><a href="eduarte.html">EduArte</a></li>
+                    <li><a href="opleidingswijzer.html">Opleidingswijzer</a></li>
+                    <li><a href="bsa.html">BSA</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">School Info ▼</a>
+                <ul>
+                    <li><a href="locatiegids.html">Locatiegids</a></li>
+                    <li><a href="software.html">Software</a></li>
+                </ul>
+            </li>
+            <li><a href="overons.html">Over Ons</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="feature-card">
+            <h2>Welkom bij EduArte</h2>
+            <p>EduArte is het centrale informatiesysteem voor studenten, ouders en docenten. Hier vindt u alle belangrijke informatie over roosters, cijfers en aanwezigheid.</p>
+            <div class="video-demo">
+                <video controls>
+                    <link href="https://www.youtube.com/watch?v=64mjmTSo09s" type="video">
+                    Uw browser ondersteunt geen video afspelen.
+                </video>
+            </div>
+        </section>
+
+        <section class="feature-grid">
+            <div class="feature-card">
+                <h3>Rooster</h3>
+                <img src="img/Schermafbeelding 2024-10-22 163053.png" alt="EduArte Rooster Screenshot">
+                <p>Bekijk het actuele lesrooster en roosterwijzigingen.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Cijferoverzicht</h3>
+                <img src="img/Schermafbeelding 2024-10-22 163405.png" alt="EduArte Cijfers Screenshot">
+            
+                <p>Volg de studievoortgang en bekijk behaalde resultaten.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Aanwezigheid</h3>
+                <img src="img/Schermafbeelding 2024-10-22 163005.png" alt="EduArte Aanwezigheid Screenshot">
+                <p>Monitor de aanwezigheid en meld absentie.</p>
+            </div>
+        </section>
+
+        <section class="feature-card">
+            <h3>Voorbeeldrooster</h3>
+            <table class="schedule-table">
+                <tr>
+                    <th>Tijd</th>
+                    <th>Maandag</th>
+                    <th>Dinsdag</th>
+                    <th>Woensdag</th>
+                    <th>Donderdag</th>
+                    <th>Vrijdag</th>
+                </tr>
+                <tr>
+                    <td>09:00 - 10:30</td>
+                    <td rowspan="2">htmlcss</td>
+                    <td>rekenen</td>
+                    <td>Programmeren</td>
+                    <td>Engels</td>
+                    <td>Project</td>
+                </tr>
+                <tr>
+                    <td>10:45 - 12:15</td>
+                    <td>Project</td>
+                    <td>Databases</td>
+                    <td rowspan="2">Praktijk</td>
+                    <td>Programmeren</td>
+                </tr>
+                <tr>
+                    <td>12:45 - 14:15</td>
+                    <td>Engels</td>
+                    <td>htmlcss</td>
+                    <td>progammeren</td>
+                    <td>Project</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="app-features">
+            <h3>EduArte App</h3>
+            <p>Download de EduArte app voor snelle toegang tot:</p>
+            <ul>
+                <li>Actueel rooster</li>
+                <li>Pushmeldingen bij roosterwijzigingen</li>
+                <li>Direct ziekmelden</li>
+                <li>Cijferoverzicht</li>
+                <li>Aanwezigheidsregistratie</li>
+            </ul>
+        </section>
+
+        <section class="feedback-form">
+            <h3>EduArte Hulpformulier</h3>
+            <form>
+                <div class="form-group">
+                    <label for="gebruikersnaam">Gebruikersnaam:</label>
+                    <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mailadres:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefoon">Telefoonnummer:</label>
+                    <input type="tel" id="telefoon" name="telefoon" pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categorie">Probleemcategorie:</label>
+                    <select id="categorie" name="categorie" required>
+                        <option value="">Kies een categorie</option>
+                        <option value="inlog">Inlogproblemen</option>
+                        <option value="rooster">Roosterproblemen</option>
+                        <option value="cijfers">Cijfers bekijken</option>
+                        <option value="app">App problemen</option>
+                        <option value="overig">Overig</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="prioriteit">Prioriteit:</label>
+                    <input type="range" id="prioriteit" name="prioriteit" min="1" max="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="bericht">Omschrijving:</label>
+                    <textarea id="bericht" name="bericht" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Verstuur</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Techniek College Rotterdam</p>
+    </footer>
+</body>
+</html>

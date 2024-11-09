@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Informatie - ROC Ouderavond</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #00796b;
+            color: white;
+            padding: 1rem;
+        }
+
+        nav {
+            background: #00796b;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #00796b;
+            width: 200px;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .info-card {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .app-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .app-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        th {
+            background: #00796b;
+            color: white;
+        }
+
+        .feedback-form {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #00796b;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00796b;
+        }
+
+        footer {
+            background: #00796b;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .video-container {
+            margin: 2rem 0;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Canvas Leeromgeving</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Studie Info ▼</a>
+                <ul>
+                    <li><a href="canvas.html">Canvas</a></li>
+                    <li><a href="eduarte.html">EduArte</a></li>
+                    <li><a href="opleidingswijzer.html">Opleidingswijzer</a></li>
+                    <li><a href="bsa.html">BSA</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">School Info ▼</a>
+                <ul>
+                    <li><a href="locatiegids.html">Locatiegids</a></li>
+                    <li><a href="software.html">Software</a></li>
+                </ul>
+            </li>
+            <li><a href="overons.html">Over Ons</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="info-card">
+            <h2>Over Canvas</h2>
+            <p>Canvas is onze digitale leeromgeving waar studenten toegang hebben tot alle cursusmateriaal, opdrachten, en communicatie met docenten. Het platform biedt verschillende tools om het leerproces te ondersteunen.</p>
+        </section>
+
+        <section class="info-card">
+            <h2>Cursussen en Leerdoelen</h2>
+            <table>
+                <tr>
+                    <th>Cursus</th>
+                    <th>Leerdoelen</th>
+                    <th>Planning</th>
+                    <th>Beoordeling</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Programmeren Basis</td>
+                    <td>Basisconcepten programmeren</td>
+                    <td>Week 1-5</td>
+                    <td>Praktijkopdracht</td>
+                </tr>
+                <tr>
+                    <td>Algoritmes en flowcharts</td>
+                    <td>Week 6-10</td>
+                    <td>Theorietoets</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><strong>Alle opdrachten moeten met minimaal een voldoende worden afgerond</strong></td>
+                </tr>
+            </table>
+        </section>
+
+        <div class="video-container">
+            <video controls>
+                <source src="https://www.youtube.com/watch?v=6uVw_r2owRM" type="video/mp4">
+            </video>
+        </div>
+
+        <section class="app-section">
+            <div class="app-card">
+                <h3>Canvas App</h3>
+                <img src="img/Schermafbeelding 2024-10-22 164621.png" alt="Canvas App Screenshot">
+                <p>De Canvas App geeft studenten toegang tot:</p>
+                <ul>
+                    <li>Cursusmateriaal</li>
+                    <li>Opdrachten</li>
+                    <li>Berichten</li>
+                    <li>Cijfers</li>
+                </ul>
+            </div>
+
+            <div class="app-card">
+                <h3>Canvas Ouder App</h3>
+                <p>Als ouder kunt u via de Canvas Ouder App:</p>
+                <ul>
+                    <li>Voortgang volgen</li>
+                    <li>Opdrachten bekijken</li>
+                    <li>Waarschuwingen ontvangen</li>
+                    <li>Communiceren met docenten</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="feedback-form">
+            <h2>Canvas Ondersteuningsformulier</h2>
+            <form>
+                <div class="form-group">
+                    <label for="naam">Naam:</label>
+                    <input type="text" id="naam" name="naam" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentnummer">Studentnummer:</label>
+                    <input type="number" id="studentnummer" name="studentnummer" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="probleem">Type probleem:</label>
+                    <select id="probleem" name="probleem" required>
+                        <option value="">Selecteer een optie</option>
+                        <option value="inloggen">Inlogproblemen</option>
+                        <option value="cursus">Cursustoegang</option>
+                        <option value="app">App problemen</option>
+                        <option value="anders">Anders</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="urgentie">Urgentie:</label>
+                    <input type="range" id="urgentie" name="urgentie" min="1" max="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="beschrijving">Beschrijving:</label>
+                    <textarea id="beschrijving" name="beschrijving" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Verstuur</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ROC Ouderavond - Alle rechten voorbehouden</p>
+    </footer>
+</body>
+</html>
